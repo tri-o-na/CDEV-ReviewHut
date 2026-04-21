@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Review.Hut</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="logo2.jfif">
+  <link rel="stylesheet" href="css/mystyle.css">
+  <script src="js/myscript.js"></script>
+</head>
+
+<body onload="getRestaurantDetails();getRestaurantReviews(); getAvgRating()">
+  <nav class="navbar navbar-expand-md">
+    <div class="titles_pages">
+      <a href="home2.html"><img class="logo" src="logo3.jfif" width="10%"></a> REVIEW.HUT
+    </div>
+    <ul class="navbar-nav ml-auto">
+      <li>
+        <a class="top_title" href="home2.html"> HOME</a>
+      </li>
+      <li>
+          <a class="top_title" href="favourites.html"> FAVOURITES</a>
+      </li>
+      <li>
+          <a class="top_title" href="about.html"> ABOUT</a>
+      </li>
+    </ul>
+    </div>
+  </nav>
+
+  <div class="row" id='restaurantInfo'>
+
+  </div>
+
+  <div class="desc">
+    <div class="review-1">
+      <h6 class="chg-color2a">REVIEWS: <button type="button" class="button2" data-toggle="modal" data-target="#reviewModal"
+        data-whatever="@getbootstrap"><span class="fa fa-plus"></span></button>
+      </h6> 
+    </div>
+    <div class="row reviews" id='restaurantReviews'>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content chg-color3">
+      <div class="modal-header">
+        <h5 class="modal-title chg-color1a" id="restaurant_review">Your Review</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="chg-color3">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label chg-color1b">Rating:&nbsp;</label>
+            <select class="rating-no" name="Rating" id="Rating" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="Review" class="col-form-label chg-color1b">Review:</label>
+            <textarea class="form-control chg-color3" id="Review"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn button3" data-dismiss="modal" id="submit_review"
+              onClick="addReview()">DONE</button>
+            <button type="button" class="btn btn-secondary button4" data-dismiss="modal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="reviewModal2" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content chg-color3">
+      <div class="modal-header">
+        <h5 class="modal-title chg-color1a" id="restaurant_id">Your Review</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="chg-color3">
+          <div class="form-group">
+            <label for="recipient-name" id="Rating" class="col-form-label chg-color1b">Rating:&nbsp;</label>
+            <select class="rating-no" name="Rating" id="Rating1" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="Review" class="col-form-label chg-color1b">Review:</label>
+            <textarea class="form-control chg-color3" id="Review1"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn button3" data-dismiss="modal" id="submit_review"
+              onClick="updateReview()">UPDATE</button>
+            <button type="button" class="btn btn-secondary button4" data-dismiss="modal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+

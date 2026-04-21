@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Review.Hut</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="icon" type="image/x-icon" class="logo" href="logo3.jfif">
+    <link rel="stylesheet" href="css/homestyle.css">
+    <script src="js/myscript.js"></script>
+</head>
+
+<body onload="getAllRestaurants();notloggedin()">
+    <nav class="navbar navbar-expand-md">
+        <div class="titles_pages">
+            <a href="home2.html"><img src="logo3.jfif" width="10%"></a> REVIEW.HUT
+        </div>
+        <div class="search-container">
+            <form>
+                <input class="search" id="searchBar" type="text" placeholder="Search..">
+                <button class="searchicon" type="button" onClick="search()"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item dropdown">
+                <a class=" dropdown-toggle top_title1" role="button" data-toggle="dropdown" > CUISINE
+                </a>
+                <div class="dropdown-menu filter" id="cuisine">
+                    <a class="dropdown-item filterOptions" href="#" value="Fast Food">Fast Food</a>
+                    <a class="dropdown-item filterOptions" href="#" value="Chinese">Chinese</a>
+                    <a class="dropdown-item filterOptions" href="#" value="Malay">Malay</a>
+                    <a class="dropdown-item filterOptions" href="#" value="Indian">Indian</a>
+                    <a class="dropdown-item filterOptions" href="#" value="Italian">Italian</a>
+                    <a class="dropdown-item filterOptions" href="#"value="Western">Western</a>
+                    <a class="dropdown-item filterOptions" href="#" value="Other">Other</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class=" dropdown-toggle top_title1" role="button" data-toggle="dropdown"> PRICE
+                </a>
+                <div class="dropdown-menu filter">
+                    <a class="dropdown-item filterOptions" href="#">Cheap</a>
+                    <a class="dropdown-item filterOptions" href="#">Affordable</a>
+                    <a class="dropdown-item filterOptions" href="#">Expensive</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class=" dropdown-toggle top_title1" role="button" data-toggle="dropdown"> TYPE OF DINING
+                </a>
+                <div class="dropdown-menu filter">
+                    <a class="dropdown-item filterOptions" href="#">Casual Dining</a>
+                    <a class="dropdown-item filterOptions" href="#">Fine Dining</a>
+                    <a class="dropdown-item filterOptions" href="#">Buffet</a>
+                    <a class="dropdown-item filterOptions" href="#">24 HOURS</a>
+                </div>
+            </li> -->
+            <li>
+                <a class="top_title_main" href="home2.html"> HOME</a>
+            </li>
+            <li>
+                <a class="top_title" href="favourites.html"> FAVOURITES</a>
+            </li>
+            <li>
+                <a class="top_title" href="about.html"> ABOUT</a>
+            </li>
+            <li>
+                <a class="top_title" onclick="logout()"> LOGOUT</a>
+            </li>
+        </ul>
+        <a href="profile.html"> <img class="image4" src="default2.jpg" width="55%"></a>
+        </div>
+    </nav>
+
+    <div class="row restaurants" id='restaurantList'>
+
+    </div>
+
+    
+
+</body>
+
+</html>
+
+

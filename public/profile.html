@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Review.Hut</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="logo2.jfif">
+  <link rel="stylesheet" href="css/mystyle.css">
+  <script src="js/myscript.js"></script>
+</head>
+
+<body onload="getUser()">
+  <nav class="navbar navbar-expand-md">
+    <div class="titles_pages">
+      <a href="home2.html"><img class="logo" src="logo3.jfif" width="11%"></a> PROFILE
+    </div>
+    <ul class="navbar-nav ml-auto">
+      </li>
+      <a class="top_title" href="home2.html"> HOME</a>
+      </li>
+      <li>
+          <a class="top_title" href="favourites.html"> FAVOURITES</a>
+      </li>
+      <li>
+        <a class="top_title" href="about.html"> ABOUT</a>
+      </li>
+    </ul>
+    </div>
+  </nav>
+  <div>
+    <div>
+      <img class="image2" id="user_picture"src="default2.jpg" width="10%">
+    </div>
+    <div>
+      <form class="profile-words">
+        <label>Full Name:</label>
+        <input type="text" class="input" id="name1" name="Name" placeholder="John Tan" required> <br>
+        <label>Username:</label>
+        <input type="text" class="input" id="username1" name="Username" placeholder="johntan86" required> <br>
+        <label class="gender">Gender: </label>
+        <select name="Gender" id="gender1">
+          <option placeholder="Male">Male</option>
+          <option placeholder="Female">Female</option>
+        </select> <br>
+        <label class="email">Email Address:</label>
+        <input type="text" class="input" id="email1" name="Email" placeholder="johntan86@gmail.com" required> <br>
+        <label class="mobile-no">Mobile Number:</label>
+        <input type="text" class="input" id="mobile_number1" name="mobile_number" placeholder="99999999" required> <br>
+        <label class="address">Address:</label>
+        <input type="text" class="input" id="address1" name="Address" placeholder="5 Tampines Ave 7 S541321" required> <br>
+        <button class="delete">Delete</button>
+        <button class="update" onclick="updateUser()">Update</button>
+      </form> <br>
+      <a class="profile-to-password" href="forget_password.html">Forget Your Passsword? Get Your Password Here</a>
+    </div>
+  </div>
+  
+
+
+
+
+
+</body>
+
+</html>
